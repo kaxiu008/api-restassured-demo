@@ -15,8 +15,8 @@ public class TestHelpers {
      */
     public static Response getResponse(RequestSpecification requestSpec,String basePath) {
 		
-        Map env = getSandbox();
-        String uri = "${env.get("sandbox")}${basePath}";
+        Map env = getSandbox()
+        String uri = "${env.get("sandbox")}${basePath}"
          
         Response response = given()
                 .spec(requestSpec)

@@ -8,7 +8,7 @@ import static helpers.TestHelpers.*
 
 public class CategoryTestService {
     
-    public static String jsonSchema = "category-details-schema.json";
+    public static String jsonSchema = "category-details-schema.json"
 
     //Set a QueryParameter and create a RequestSpecification
     public static RequestSpecification createRequestSpec() {
@@ -19,8 +19,8 @@ public class CategoryTestService {
 
     //Send a Get Request to Category API and get Response
     public Response getCategoryDetails() {	
-        RequestSpecification spec = createRequestSpec();
-        Response response = getResponse(spec,"/v1/Categories/6327/Details.json");
-        return response;
+        RequestSpecification spec = createRequestSpec()
+        Response response = getResponse(spec,"/v1/Categories/6327/Details.json")
+        return response
     }
 }
