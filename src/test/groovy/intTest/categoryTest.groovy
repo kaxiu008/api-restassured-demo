@@ -10,21 +10,21 @@ import testServices.CategoryTestJsonPath
 
 public class CategoryTest {
 
-    private static Response categoryDetailResponse;
-    private static CategoryTestService testService;
-    private static CategoryTestJsonPath jsonPath;
+    private static Response categoryDetailResponse
+    private static CategoryTestService testService
+    private static CategoryTestJsonPath jsonPath
 
     @BeforeClass
     public static void Setup() {
         //Initialize services for Category API
-        testService = new CategoryTestService();
-        jsonPath = new CategoryTestJsonPath();
+        testService = new CategoryTestService()
+        jsonPath = new CategoryTestJsonPath()
     }
 	
     @Test
     void testCategory() {
         //Send a Get Request to Category API and get Response
-        categoryDetailResponse = testService.getCategoryDetails();
+        categoryDetailResponse = testService.getCategoryDetails()
 
         //Verify the API JSON Schema, Name, CanRelist, Promotion fields in the response
         categoryDetailResponse.then().assertThat()
